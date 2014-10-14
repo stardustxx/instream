@@ -8,14 +8,6 @@
 	<script src=js/instafeed.js type="text/javascript"></script>
 	<link res="stylesheet" href="css/app.css">
 	<link res="stylesheet" href="css/bootstrap.min.css">
-	<script type="text/javascript">
-		var feed = new Instafeed({
-        	get: 'tagged',
-        	tagName: 'awesome',
-        	clientId: 'ad21e02365f64f63a05a4cc31b5306d3'
-    	});
-    	feed.run();
-	</script>
 </head>
 <body>
 	<div id="container">
