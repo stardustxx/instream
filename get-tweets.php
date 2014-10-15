@@ -1,5 +1,4 @@
 <?php
-
 	//inclue code bird to do the oauth lifting for us
 	require_once('cb/codebird.php');
 
@@ -29,7 +28,7 @@
 		//Create query
 		$params = array(
 			'q' => $tag,
-			'count' => 100
+			'count' => 25
 		);
 
 			//retrieve posts
@@ -52,34 +51,18 @@
 	if(!empty($data)){
 		//display the profile data
 		echo "<div class='post'>";
-			//echo "<section class='post'>";
-				//echo "<header class='post-header'>";
-					//parse the url for full image of profile
-					//$profilePicture = $data['0']['user']['profile_image_url'];
-					//$profilePicture = str_replace("_normal", "", $profilePicture);
-					//echo "<img src=\"".$profilePicture."\"/>"; //getting the profile image
-					//echo "<br/>";
-					//echo "Name: ".$data['0']['user']['name']."<br/>"; //getting the username
-					//echo "Web: <a href='".$data['0']['user']['url']."'>".$data['0']['user']['url']."</a><br/>"; //getting the web site address
-					//echo "Location: ".$data['0']['user']['location']."<br/>"; //user location
-					//echo "Updates: ".$data['0']['user']['statuses_count']."<br/>"; //number of updates
-					//echo "Follower: ".$data['0']['user']['followers_count']."<br/>"; //number of followers
-					//echo "Following: ".$data['0']['user']['friends_count']."<br/>"; // following
-					//echo "Description: ".$data['0']['user']['description']."<br/>"; //user description
-				//echo "</header>";
-			//echo "</section>";
-
 		//display tweets under
 		foreach ($data as $item){
 			echo "<section class='post'>";
 				echo "<div class='post-description'>";
+				echo "<div class = 'item'>";
 				echo $item['text'];
 				if(!empty($item['entities']['media']['0']['media_url'])){
 					echo "<img src=\"".$item['entities']['media']['0']['media_url']."\" width=\"200\" height=\"200\"/>"; //getting the media image
 				}
-				echo "</div>";
+				echo "</div></div>";
 				echo "<p class='post-meta'>";
-				echo "<em>".$item['created_at']."</em>";
+				//echo "<em>".$item['created_at']."</em>";
 				echo "</p>";
 				echo '<br/>';
 			echo '</p>';

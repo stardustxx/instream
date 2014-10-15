@@ -54,6 +54,16 @@ var result = "";
 
 function updatepage(str){
   document.getElementById("feed").innerHTML = str;
+  $(function(){
+    var $container = $('.masonry');
+    $container.imagesLoaded(function(){
+      $container.masonry({
+          itemSelector : '.item',
+          gutterWidth : 20,
+          isAnimated: true,
+      });
+    });
+  });
 }
 
 function addToResult(str){
@@ -85,3 +95,5 @@ function postRequest(strURL) {
 
    xmlHttp.send(strURL);
 }
+
+

@@ -34,10 +34,12 @@
 
   //Now parse through the $results array to display your results...
   foreach($results['data'] as $item){
+  	  echo "<div class = 'item'>";
       $image_link = $item['images']['thumbnail']['url'];
       echo '<img src="'.$image_link.'" />';
-      $caption = $item['caption']['text'];
-      echo '<p>'.$caption.'</p>';
+      // $caption = $item['caption']['text'];
+      // echo '<p>'.$caption.'</p>';
+      echo "</div>";
   }
 
 ?>
