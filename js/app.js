@@ -53,16 +53,11 @@ $(document).ready(function(){
 var result = "";
 
 function updatepage(str){
-  document.getElementById("feed").innerHTML = str;
-  $(function(){
-    var $container = $('.masonry');
-    $container.imagesLoaded(function(){
-      $container.masonry({
-          itemSelector : '.item',
-          gutterWidth : 20,
-          isAnimated: true,
-      });
-    });
+  document.getElementById("container").innerHTML = str;
+  var container = document.querySelector('#container');
+  var msnry = new Masonry(container, {
+    columnWidth: 200,
+    itemSelector: '.item'
   });
 }
 
