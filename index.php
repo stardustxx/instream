@@ -6,8 +6,8 @@
 	<script src="js/jquery.js" type="text/javascript"></script>
 	<script src="js/masonry.js" type="text/javascript"></script>
 	<script src="js/app.js" type="text/javascript"></script>
-	<link res="stylesheet" href="css/app.css">
-	<link res="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body onload="load();">
 	<div>

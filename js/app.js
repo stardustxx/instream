@@ -102,7 +102,7 @@ function postRequest(strURL) {
 
 //keep loading
 function load(){
-  setInterval(updatepage, 3000);
+  setInterval(updatepage, 30000);
 }
 
 //declare loading
