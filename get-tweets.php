@@ -57,7 +57,7 @@
 			echo "<section class='post'>";
 				echo "<div class='post-description'>";
 				echo "<div class = 'item'>";
-				//echo $item['text'];
+				echo $item['text'];
 				if(!empty($item['entities']['media']['0']['media_url'])){
 					echo "<img src=\"".$item['entities']['media']['0']['media_url']."\" width=\"200\" height=\"200\"/>"; //getting the media image
 				}
