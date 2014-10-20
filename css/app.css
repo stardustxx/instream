@@ -6,8 +6,8 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-#masonry {
-    max-width: 1500px;
+#container {
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,7 +19,7 @@ body {
 .item {
     margin: 10px;
     float: left;
-    width: 130px;
+    width: 300px;
     box-shadow: 10px 10px 5px #888888;
 }
 
@@ -28,3 +28,4 @@ body {
     height: 100px;
     overflow: hidden;
 }
+

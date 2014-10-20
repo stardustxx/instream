@@ -56,7 +56,7 @@ function updatepage(str){
   document.getElementById("container").innerHTML = str;
   var container = document.querySelector('#container');
   var msnry = new Masonry(container, {
-    columnWidth: 200,
+    columnWidth: 20,
     itemSelector: '.item'
   });
 }
