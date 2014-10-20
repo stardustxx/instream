@@ -26,7 +26,7 @@ $(document).ready(function(){
           loading();
           timer = setTimeout(function() {
             instaSearch();
-            //tweetSearch();
+            tweetSearch();
           }, 900);
      }
   });
@@ -58,7 +58,10 @@ var result = "";
 
 function updatepage(){
   instaSearch();
-  //tweetSearch();
+  tweetSearch();
+}
+
+function mason(){
   document.getElementById("container").innerHTML = result;
   console.log("updated @" + Date());
   var con = document.querySelector('#container');
@@ -70,6 +73,7 @@ function updatepage(){
 function addToResult(str){
   var newResult = str + result;
   result = newResult;
+  mason();
 }
 
 function postRequest(strURL) {
@@ -98,7 +102,7 @@ function postRequest(strURL) {
 
 //keep loading
 function load(){
-  setInterval(updatepage, 30000);
+  setInterval(updatepage, 3000);
 }
 
 //declare loading
