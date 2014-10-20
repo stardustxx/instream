@@ -16,11 +16,26 @@ body {
     padding: 20px;
 }
 
-.item {
+.iitem {
     margin: 10px;
+    padding: 10px;
     float: left;
-    width: 300px;
-    box-shadow: 10px 10px 5px #888888;
+    max-width: 300px;
+    border-color: green;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.titem {
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    max-width: 300px;
+    border-color: blue;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 5px 5px 5px #888888;
 }
 
 .item img {

@@ -35,7 +35,7 @@
   //Now parse through the $results array to display your results...
   if(!empty($results)){
     foreach($results['data'] as $item){
-        echo "<div class = 'item'>";
+        echo "<div class = 'item iitem'>";
         $image_link = $item['images']['thumbnail']['url'];
         echo '<img src="'.$image_link.'" />';
         // $caption = $item['caption']['text'];
