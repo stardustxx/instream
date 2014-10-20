@@ -45,6 +45,4 @@
   }else{
     echo "No Results!";
   }
-
-
 ?>
