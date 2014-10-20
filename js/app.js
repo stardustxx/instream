@@ -23,7 +23,7 @@ $(document).ready(function(){
           loading();
           timer = setTimeout(function() {
             instaSearch();
-            //tweetSearch();
+            tweetSearch();
           }, 900);
      }
   });
@@ -58,7 +58,6 @@ function updatepage(){
   console.log("updated @" + Date());
   var con = document.querySelector('#container');
   var msnry = new Masonry(con, {
-    //options
     itemSelector: '.item'
   });
 }
