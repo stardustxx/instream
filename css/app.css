@@ -4,10 +4,13 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .js-masonry {
-    max-width: 1500px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,5 +43,5 @@ body {
 
 .item img {
     width: auto;
-    max-height: 200px;
+    max-height: 150px;
 }
