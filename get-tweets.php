@@ -41,7 +41,7 @@
 			$twitterData = json_decode(json_encode($twitterRes), true);
 
 			//Optionally, store results in a file
-			file_put_contents("twitter.json", json_encode($twitterRes));
+			//file_put_contents("twitter.json", json_encode($twitterRes));
 
 
 	//Output result
