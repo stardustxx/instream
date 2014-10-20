@@ -15,8 +15,6 @@
 			<small>Note: No spaces or punctuation allowed. Searches are limited to one keyword also.</small>
 			<input type="text" id="search" name="search" class="searchField" placeholder="Enter a search tag...">
 		</section>
-		<div id="container" class="js-masonry"
-  data-masonry-options='{ "itemSelector": ".item" }'>
 		<div id="container" class="js-masonry container-fluid tbCenter">
 		</div>
 	</div>
