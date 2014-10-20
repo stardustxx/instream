@@ -1,6 +1,5 @@
 $(document).ready(function(){
   var searchField = $('#search');
-  var container = $('#feed');
   var timer;
 
     /**
@@ -15,14 +14,16 @@ $(document).ready(function(){
    * 220 = FORWARD SLASH
    * 221 = RIGHT BRACKET
    */
+
   $(searchField).keydown(function(e){
     if(e.keyCode == '32' || e.keyCode == '188' || e.keyCode == '189' || e.keyCode == '13' || e.keyCode == '190' || e.keyCode == '219' || e.keyCode == '221' || e.keyCode == '191' || e.keyCode == '220') {
        e.preventDefault();
      } else {
           clearTimeout(timer);
-
+          loading();
           timer = setTimeout(function() {
-            instaSearch(); tweetSearch();
+            instaSearch();
+            //tweetSearch();
           }, 900);
      }
   });
@@ -31,7 +32,7 @@ $(document).ready(function(){
   function tweetSearch(){
     var tag = $(searchField).val();
     if(tag == ''){
-      document.getElementById("feed").innerHTML = "PLEASE TYPE SOME SHITS";
+      document.getElementById("container").innerHTML = "PLEASE TYPE SOME SHITS";
     }else{
       var Tweeturl = 'get-tweets.php?tag='+tag;
       postRequest(Tweeturl);
@@ -41,7 +42,7 @@ $(document).ready(function(){
   function instaSearch() {
     var tag = $(searchField).val();
     if(tag == ''){
-      document.getElementById("feed").innerHTML = "PLEASE TYPE SOME SHITS";
+      document.getElementById("container").innerHTML = "PLEASE TYPE SOME SHITS";
     }else{
       var Instaurl = 'instasearch.php?tag='+tag;
       postRequest(Instaurl);
@@ -52,11 +53,12 @@ $(document).ready(function(){
 
 var result = "";
 
-function updatepage(str){
-  document.getElementById("container").innerHTML = str;
-  var container = document.querySelector('#container');
-  var msnry = new Masonry(container, {
-    columnWidth: 200,
+function updatepage(){
+  document.getElementById("container").innerHTML = result;
+  console.log("updated @" + Date());
+  var con = document.querySelector('#container');
+  var msnry = new Masonry(con, {
+    //options
     itemSelector: '.item'
   });
 }
@@ -64,7 +66,6 @@ function updatepage(str){
 function addToResult(str){
   var newResult = str + result;
   result = newResult;
-  updatepage(result);
 }
 
 function postRequest(strURL) {
@@ -91,4 +92,13 @@ function postRequest(strURL) {
    xmlHttp.send(strURL);
 }
 
+//keep loading
+function load(){
+  setInterval(updatepage, 3000);
+}
 
+//declare loading
+function loading(){
+  result = "";
+  document.getElementById("container").innerHTML = "LOADING...";
+}
