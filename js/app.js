@@ -25,7 +25,7 @@ $(document).ready(function(){
           clearTimeout(timer);
           loading();
           timer = setTimeout(function() {
-            //instaSearch();
+            instaSearch();
             tweetSearch();
           }, 900);
      }

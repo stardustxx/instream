@@ -4,11 +4,10 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    width: 500px;
 }
 
 .js-masonry {
-    width: 1500px;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -21,10 +20,10 @@ body {
     margin: 10px;
     float: left;
     width: 300px;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 .item img {
     width: auto;
-    height: 100px;
-    overflow: hidden;
+    max-height: 200px;
 }
