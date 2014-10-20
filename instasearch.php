@@ -30,7 +30,7 @@
   $results = json_decode($response, true);
 
   //Optionally, store results in a file
-  file_put_contents("insta.json", json_encode($response));
+  //file_put_contents("insta.json", json_encode($response));
 
   //Now parse through the $results array to display your results...
   if(!empty($results)){
