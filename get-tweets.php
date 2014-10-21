@@ -2,6 +2,9 @@
 	//inclue code bird to do the oauth lifting for us
 	require_once('cb/codebird.php');
 
+    //include our own data storage
+    include_once('data.php');
+
 	//store keys/tokens/secrets provided by Twitter
 	$CONSUMER_KEY = 'L2MGbFUJ0Wuuovd6uI4Ow';
 	$CONSUMER_SECRET = 'sHVzOKmJdYeW8XeuO8hNZZ1ObOi6XSGI1iU8lcY4';
@@ -22,32 +25,48 @@
 	//app authentication
 	\Codebird\Codebird::setBearerToken($bearer_token);
 
-		//variables
-		$tag = $_GET['tag'];
+		//if the stored tag and given tag aren't the same
+        if($_SESSION['tag'] != $_GET['tag']){
+            //stored tag becomes the newer tag
+            $_SESSION['tag'] = $_GET['tag'];    //echo 'changed tag to '.$_SESSION['tag'];
+            //reset the id counter
+            $_SESSION['tweetID'] = '0';
+        }
+
+        //echo $_SESSION['tweetID'];
+        
+        $tag = $_SESSION['tag'];
+        $id = $_SESSION['tweetID'];
+
 
 		//Create query
 		$params = array(
-			'q' => $tag,
+			'q' => '#'.$tag,
             'include_entities' => 'true',
-			'count' => 25
+            'since_id' => $id,
+			'count' => 5
 		);
 
-			//retrieve posts
-			$api = "search_tweets";
+        //retrieve posts
+        $api = "search_tweets";
 
-			//Make the REST call
-			$twitterRes = (array) $cb->$api($params);
+        //Make the REST call
+        $twitterRes = (array) $cb->$api($params);
 
-			//convert results to an associative array
-			$twitterData = json_decode(json_encode($twitterRes), true);
+        //convert results to an associative array
+        $twitterData = json_decode(json_encode($twitterRes), true);
 
-			//Optionally, store results in a file
-			//file_put_contents("twitter.json", json_encode($twitterRes));
+        //Optionally, store results in a file
+        //file_put_contents("twitter.json", json_encode($twitterRes));
 
 
 	//Output result
+    $data = $twitterData['statuses'];
 
-	$data = $twitterData['statuses'];
+    //check if id stored, if not, add the id
+    if(empty($id) && !empty($data)){
+        $_SESSION['tweetID'] = $data[0]['id_str'];
+    }
 
 	if(!empty($data)){
 		//display the profile data
