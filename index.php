@@ -16,6 +16,9 @@
 	<link rel="import" href="components/paper-icon-button/paper-icon-button.html">
 	<link rel="import" href="components/paper-input/paper-input.html">
 	<link rel="import" href="components/paper-toast/paper-toast.html">
+    <link rel="import" href="components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="components/paper-elements/paper-elements.html">
+    <link rel="import" href="components/paper-ripple/paper-ripple.html">
 </head>
 <body onload="load();">
 	<core-toolbar id = "mainHeader">

@@ -64,7 +64,6 @@ function updatepage(){
 }
 
 var mason = function(){
-  document.getElementById("container").innerHTML = result;
   var con = document.querySelector('#container');
   var msnry = new Masonry(con, {
     itemSelector: '.item'
@@ -75,10 +74,13 @@ function addToResult(str){
   var newResult = str + result;
   result = newResult;
 //  $("#container").append("str");
+  document.getElementById("container").innerHTML = result;
+    console.log("container has run");
   $("#container").ready(function(){
     $(".item").fadeIn('slow');
   })
   mason();
+    console.log("mason has run");
 }
 
 function postRequest(strURL) {
