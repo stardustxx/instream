@@ -19,6 +19,7 @@
 </head>
 <body onload="load();">
 	<core-toolbar id = "mainHeader">
+		<paper-icon-button icon="refresh" onclick="updatepage()"></paper-icon-button>
 		<paper-icon-button icon="search"></paper-icon-button>
 		<paper-input id = "search" label = "Enter a search tag"></paper-input>
 	</core-toolbar>

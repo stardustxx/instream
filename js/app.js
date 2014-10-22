@@ -74,6 +74,7 @@ var mason = function(){
 function addToResult(str){
   var newResult = str + result;
   result = newResult;
+//  $("#container").append("str");
   $("#container").ready(function(){
     $(".item").fadeIn('slow');
   })
