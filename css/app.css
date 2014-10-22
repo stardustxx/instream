@@ -4,16 +4,8 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.js-masonry {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .container-fluid {
     padding: 20px;
@@ -44,4 +36,10 @@ body {
 .item img {
     width: auto;
     max-height: 150px;
+}
+
+#beaker {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
