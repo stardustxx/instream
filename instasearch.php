@@ -53,7 +53,7 @@
     $_SESSION['instaID'] = $results['data'][0]['id'];
     foreach($results['data'] as $item){
         echo "<div class = 'item iitem'>";
-        $image_link = $item['images']['thumbnail']['url'];
+        $image_link = $item['images']['standard_resolution']['url'];
         echo '<img src="'.$image_link.'" />';
         // $caption = $item['caption']['text'];
         // echo '<p>'.$caption.'</p>';

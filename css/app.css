@@ -12,34 +12,33 @@ body {
 }
 
 .iitem {
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    max-width: 300px;
     border-color: green;
     border-width: 2px;
     border-style: solid;
-    box-shadow: 5px 5px 5px #888888;
 }
 
 .titem {
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    max-width: 300px;
     border-color: blue;
     border-width: 2px;
     border-style: solid;
+}
+
+.item {
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    width: 400px;
+    height: auto;
     box-shadow: 5px 5px 5px #888888;
 }
 
 .item img {
-    width: auto;
-    max-height: 150px;
+    max-width: 250px;      
+    height: auto;
 }
 
 #beaker {
-    max-width: 1000px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }

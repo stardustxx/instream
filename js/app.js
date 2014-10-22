@@ -61,9 +61,8 @@ function updatepage(){
   tweetSearch();
 }
 
-function mason(){
+var mason = function(){
   document.getElementById("container").innerHTML = result;
-  console.log("updated @" + Date());
   var con = document.querySelector('#container');
   var msnry = new Masonry(con, {
     itemSelector: '.item'
@@ -73,6 +72,9 @@ function mason(){
 function addToResult(str){
   var newResult = str + result;
   result = newResult;
+  $("#container").ready(function(){
+    $(".item").fadeIn('slow');
+  })
   mason();
 }
 
