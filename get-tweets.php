@@ -44,7 +44,7 @@
 			'q' => '#'.$tag,
             'include_entities' => 'true',
             'since_id' => $id,
-			'count' => 5
+			'count' => 15
 		);
 
         //retrieve posts

@@ -25,7 +25,7 @@ $(document).ready(function(){
           clearTimeout(timer);
           loading();
           timer = setTimeout(function() {
-            //instaSearch();
+            instaSearch();
             tweetSearch();
           }, 900);
      }
@@ -57,7 +57,7 @@ $(document).ready(function(){
 var result = "";
 
 function updatepage(){
-  //instaSearch();
+  instaSearch();
   tweetSearch();
 }
 
@@ -102,7 +102,7 @@ function postRequest(strURL) {
 
 //keep loading
 function load(){
-  setInterval(updatepage, 30000);
+  setInterval(updatepage, 10000);
 }
 
 //declare loading
