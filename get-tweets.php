@@ -75,8 +75,9 @@
 		foreach ($data as $item){
 			echo "<section class='post'>";
 				echo "<div class='post-description'>";
-                echo "<paper-shadow z = '2'>";
 				echo "<div class = 'item titem'>";
+                echo "<paper-shadow z='2'></paper-shadow>";
+                echo "<paper-ripple fit></paper-ripple>";
 				echo $item['text'];
 				if(!empty($item['entities']['media']['0']['media_url'])){
 					echo "<img src=\"".$item['entities']['media']['0']['media_url']."\" width=\"200\" height=\"200\"/>"; //getting the media image
