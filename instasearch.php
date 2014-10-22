@@ -17,11 +17,10 @@
   
   $tag = $_SESSION['tag'];
   $id = $_SESSION['instaID'];
-  $count = 15;
+  $count = 33;
 
-  $api = 'https://api.instagram.com/v1/tags/'.$tag.'/media/recent?max_id='.$id.'&client_id='.$CLIENT_ID;
+  $api = 'https://api.instagram.com/v1/tags/'.$tag.'/media/recent?client_id='.$CLIENT_ID.'&count='.$count;
 
- //echo $id.'\n';
 
   function get_curl($url) {
     if(function_exists('curl_init')) {
@@ -50,7 +49,7 @@
   //Now parse through the $results array to display your results...
   if(!empty($results)){
     //store id to session
-    $_SESSION['instaID'] = $results['data'][0]['id'];
+      echo sizeof($results['data']);
     foreach($results['data'] as $item){
         echo "<div class = 'item iitem'>";
         echo "<paper-shadow z='2'></paper-shadow>";

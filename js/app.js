@@ -26,7 +26,7 @@ $(document).ready(function(){
           loading();
           timer = setTimeout(function() {
             instaSearch();
-            tweetSearch();
+            //tweetSearch();
           }, 900);
           document.querySelector("#toast1").show();
      }
@@ -60,7 +60,7 @@ var result = "";
 function updatepage(){
   loading();
   instaSearch();
-  tweetSearch();
+  //tweetSearch();
 }
 
 var mason = function(){
