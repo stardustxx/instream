@@ -35,7 +35,7 @@ $(document).ready(function(){
   tweetSearch = function(){
     var tag = $(searchField).val();
     if(tag == ''){
-      document.getElementById("container").innerHTML = "PLEASE TYPE SOME SHITS";
+      document.getElementById("container").innerHTML = "Please type something to search";
     }else{
       var Tweeturl = 'get-tweets.php?tag='+tag;
       postRequest(Tweeturl);

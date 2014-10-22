@@ -12,8 +12,7 @@
 <body onload="load();">
 	<div id = "beaker" class = "tbCenter">
 		<section id="sform">
-			<small>Note: No spaces or punctuation allowed. Searches are limited to one keyword also.</small>
-			<input type="text" id="search" name="search" class="searchField" placeholder="Enter a search tag...">
+			<input type="text" id="search" name="search" class="searchField form-control" placeholder="Enter a search tag">
 		</section>
 		<div id="container" class="js-masonry container-fluid tbCenter">
 		</div>
