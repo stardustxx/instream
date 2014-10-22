@@ -28,6 +28,7 @@ $(document).ready(function(){
             instaSearch();
             tweetSearch();
           }, 900);
+          document.querySelector("#toast1").show();
      }
   });
 
@@ -35,7 +36,7 @@ $(document).ready(function(){
   tweetSearch = function(){
     var tag = $(searchField).val();
     if(tag == ''){
-      document.getElementById("container").innerHTML = "Please type something to search";
+      document.querySelector("#toast2").show();
     }else{
       var Tweeturl = 'get-tweets.php?tag='+tag;
       postRequest(Tweeturl);
@@ -45,7 +46,7 @@ $(document).ready(function(){
   instaSearch = function() {
     var tag = $(searchField).val();
     if(tag == ''){
-      document.getElementById("container").innerHTML = "PLEASE TYPE SOME SHITS";
+      document.querySelector("#toast2").show();
     }else{
       var Instaurl = 'instasearch.php?tag='+tag;
       postRequest(Instaurl);
@@ -57,6 +58,7 @@ $(document).ready(function(){
 var result = "";
 
 function updatepage(){
+  loading();
   instaSearch();
   tweetSearch();
 }
@@ -104,11 +106,12 @@ function postRequest(strURL) {
 
 //keep loading
 function load(){
-  setInterval(updatepage, 10000);
+  // setInterval(updatepage, 30000);
+  updatepage();
 }
 
 //declare loading
 function loading(){
   result = "";
-  document.getElementById("container").innerHTML = "LOADING...";
+  // document.getElementById("container").innerHTML = "LOADING...";
 }
