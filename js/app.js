@@ -76,9 +76,6 @@ function addToResult(str){
 //  $("#container").append("str");
   document.getElementById("container").innerHTML = result;
     console.log("container has run");
-  $("#container").ready(function(){
-    $(".item").fadeIn('slow');
-  })
   mason();
     console.log("mason has run");
 }
