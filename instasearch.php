@@ -49,7 +49,7 @@
   //Now parse through the $results array to display your results...
   if(!empty($results)){
     //store id to session
-      echo sizeof($results['data']);
+      //echo sizeof($results['data']);
     foreach($results['data'] as $item){
         echo "<div class = 'item iitem'>";
         echo "<paper-shadow z='2'></paper-shadow>";
