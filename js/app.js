@@ -76,8 +76,8 @@ function addToResult(str){
 //  $("#container").append("str");
   document.getElementById("container").innerHTML = result;
     console.log("container has run");
-  mason();
-    console.log("mason has run");
+//  mason();
+//    console.log("mason has run");
 }
 
 function postRequest(strURL) {

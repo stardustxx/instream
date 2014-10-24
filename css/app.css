@@ -45,5 +45,11 @@ body {
 }
 
 #mainHeader {
-    background-color: grey;
+    background-color: #009688;
+}
+
+core-header-panel {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; 
 }

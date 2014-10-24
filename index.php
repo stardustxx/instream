@@ -19,23 +19,29 @@
     <link rel="import" href="components/paper-shadow/paper-shadow.html">
     <link rel="import" href="components/paper-elements/paper-elements.html">
     <link rel="import" href="components/paper-ripple/paper-ripple.html">
+    <link rel="import" href="components/core-header-panel/core-header-panel.html">
 </head>
 <body onload="load();">
-	<core-toolbar id = "mainHeader">
-		<paper-icon-button icon="refresh" onclick="updatepage()"></paper-icon-button>
-		<paper-icon-button icon="search"></paper-icon-button>
-		<paper-input id = "search" label = "Enter a search tag"></paper-input>
-	</core-toolbar>
-	<div id = "beaker" class = "tbCenter">
-		<!-- <section id="sform">
-			<input type="text" id="search" name="search" class="searchField form-control" placeholder="Enter a search tag">
-		</section> -->
-		<div id="container" class="js-masonry container-fluid tbCenter">
-		</div>
-		<div id = "toast">
-			<paper-toast id = "toast1" text = "Fetching results"></paper-toast>
-			<paper-toast id = "toast2" text = "Please type something to search"></paper-toast>
-		</div>
-	</div>
+    <core-header-panel mode = "seamed">
+        <core-toolbar id = "mainHeader">
+            <paper-icon-button raised icon="refresh" onclick="updatepage()"></paper-icon-button>
+            <span flex>InStream</span>
+            <paper-icon-button icon="search"></paper-icon-button>
+            <paper-input id = "search" label = "Enter a search tag"></paper-input>
+        </core-toolbar>
+    
+	
+        <div id = "beaker" class = "tbCenter">
+            <!-- <section id="sform">
+                <input type="text" id="search" name="search" class="searchField form-control" placeholder="Enter a search tag">
+            </section> -->
+            <div id="container" class="js-masonry container-fluid tbCenter">
+            </div>
+            <div id = "toast">
+                <paper-toast id = "toast1" text = "Fetching results"></paper-toast>
+                <paper-toast id = "toast2" text = "Please type something to search"></paper-toast>
+            </div>
+        </div>
+    </core-header-panel>
 </body>
 </html>
