@@ -60,6 +60,13 @@ $(document).ready(function(){
 
 var result = "";
 
+var mason = function(){
+  var con = document.querySelector('#container');
+  var msnry = new Masonry(con, {
+    itemSelector: '.item'
+  });
+}
+
 function addToResult(str){
   var newResult = str + result;
   result = newResult;
