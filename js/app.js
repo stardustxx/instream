@@ -70,13 +70,6 @@ function updatepage(){
   //tweetSearch();
 }
 
-var mason = function(){
-  var con = document.querySelector('#container');
-  var msnry = new Masonry(con, {
-    itemSelector: '.item'
-  });
-}
-
 function addToResult(str){
   var newResult = str + result;
   result = newResult;
@@ -95,8 +88,6 @@ function addToResult(str){
             else{this.className = 'item';}
         }, false);
     }
-//  mason();
-//    console.log("mason has run");
 }
 
 function postRequest(strURL) {
@@ -123,15 +114,8 @@ function postRequest(strURL) {
    xmlHttp.send(strURL);
 }
 
-//keep loading
-function load(){
-  // setInterval(updatepage, 30000);
-  //$(searchField).val().setContent('HelloWorld');
-  //updatepage();
-}
-
 //declare loading
 function loading(){
   result = "";
-  // document.getElementById("container").innerHTML = "LOADING...";
+  document.querySelector("#toast1").show();
 }

@@ -22,7 +22,7 @@
     <link rel="import" href="components/paper-ripple/paper-ripple.html">
     <link rel="import" href="components/core-header-panel/core-header-panel.html">
 </head>
-<body onload="load();">
+<body>
     <core-header-panel mode = "seamed">
         <core-toolbar id = "mainHeader">
             <paper-icon-button raised icon="refresh" onclick="updatepage()"></paper-icon-button>
