@@ -17,7 +17,7 @@
   
   $tag = $_SESSION['tag'];
   $id = $_SESSION['instaID'];
-  $count = 33;
+  $count = 60;
 
   $api = 'https://api.instagram.com/v1/tags/'.$tag.'/media/recent?client_id='.$CLIENT_ID.'&count='.$count;
 
