@@ -8,7 +8,6 @@
 	<script src="js/masonry.js" type="text/javascript"></script>
 	<script src="js/app.js" type="text/javascript"></script>
 	<script src="components/webcomponentsjs/webcomponents.js" type="text/javascript"></script>
-    <script src="components/platform/platform.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="import" href="components/paper-button/paper-button.html">
@@ -22,7 +21,6 @@
     <link rel="import" href="components/paper-elements/paper-elements.html">
     <link rel="import" href="components/paper-ripple/paper-ripple.html">
     <link rel="import" href="components/core-header-panel/core-header-panel.html">
-    <link rel="import" href="components/core-animated-pages/core-animated-pages.html">
 </head>
 <body onload="load();">
     <core-header-panel mode = "seamed">
