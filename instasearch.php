@@ -56,8 +56,16 @@
         echo "<paper-ripple fit></paper-ripple>";
         $image_link = $item['images']['standard_resolution']['url'];
         echo '<img id="img" src="'.$image_link.'" />';
-        // $caption = $item['caption']['text'];
-        // echo '<p>'.$caption.'</p>';
+        
+        //hidden content
+        echo '<div class="card-right content" flex>';
+            $user = $item['user']['username'];
+            $url = $item['link'];
+            echo '<div layout horizontal center><strong>'.$user.'</strong></div>';
+            $caption = $item['caption']['text'];
+            echo '<div flex><p class="caption">'.$caption.'</p></div>';
+        echo '</div>';
+        
         echo "</paper-item>";
     }
   }else{
