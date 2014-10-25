@@ -8,7 +8,7 @@ body {
 
 
 .container-fluid {
-    padding: 20px;
+    padding: 1rem;
 }
 
 /*
@@ -26,17 +26,30 @@ body {
 */
 
 .item {
-    margin: 10px;
-    padding: 10px;
+    margin: 1rem;
+    padding: 0.5rem;
     float: left;
-    width: 400px;
     height: auto;
 /*    box-shadow: 5px 5px 5px #888888;*/
 }
 
 .item img {
-    max-width: 250px;      
+    width: 19.5rem;
     height: auto;
+    overflow: hidden;
+}
+
+.expand {
+    margin: 1rem;
+    padding: 0.5rem;
+    float: left;
+    height: auto;
+}
+
+.expand img {
+    width: 50rem;
+    height: auto;
+    overflow: scroll;
 }
 
 #beaker {
@@ -45,7 +58,7 @@ body {
 }
 
 #mainHeader {
-    background-color: #009688;
+    background-color: #00C688;
 }
 
 core-header-panel {

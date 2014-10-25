@@ -76,6 +76,18 @@ function addToResult(str){
 //  $("#container").append("str");
   document.getElementById("container").innerHTML = result;
     console.log("container has run");
+    
+    //do some functions?
+    var papers = document.getElementsByTagName('paper-item');
+    
+    for(var i=0; i<papers.length; i++){
+        var paper = papers[i];
+        paper.addEventListener('click', function(){
+            console.log('became bigger and harder :D');
+            if(this.className == 'item'){this.className = 'expand';}
+            else{this.className = 'item';}
+        }, false);
+    }
 //  mason();
 //    console.log("mason has run");
 }
@@ -107,7 +119,8 @@ function postRequest(strURL) {
 //keep loading
 function load(){
   // setInterval(updatepage, 30000);
-  updatepage();
+  //$(searchField).val().setContent('HelloWorld');
+  //updatepage();
 }
 
 //declare loading

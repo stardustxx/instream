@@ -51,14 +51,14 @@
     //store id to session
       //echo sizeof($results['data']);
     foreach($results['data'] as $item){
-        echo "<div class = 'item iitem'>";
+        echo "<paper-item class = 'item'>";
         echo "<paper-shadow z='2'></paper-shadow>";
         echo "<paper-ripple fit></paper-ripple>";
         $image_link = $item['images']['standard_resolution']['url'];
-        echo '<img src="'.$image_link.'" />';
+        echo '<img id="img" src="'.$image_link.'" />';
         // $caption = $item['caption']['text'];
         // echo '<p>'.$caption.'</p>';
-        echo "</div>";
+        echo "</paper-item>";
     }
   }else{
     echo "No Results!";
