@@ -52,13 +52,16 @@ $(document).ready(function(){
       postRequest(Instaurl);
     }
   }
-  
-  //initial load
-  postRequest('instasearch.php?tag=instadaily');
 
 });
 
 var result = "";
+
+function updatepage(){
+  loading();
+  instaSearch();
+  //tweetSearch();
+}
 
 var mason = function(){
   var con = document.querySelector('#container');
@@ -113,14 +116,15 @@ function postRequest(strURL) {
    xmlHttp.send(strURL);
 }
 
-//update page
-function updatepage(){
-    loading();
-    instaSearch();
+//keep loading
+function load(){
+  // setInterval(updatepage, 30000);
+  //$(searchField).val().setContent('HelloWorld');
+  //updatepage();
 }
 
 //declare loading
 function loading(){
   result = "";
-  document.querySelector("#toast1").show();
+  // document.getElementById("container").innerHTML = "LOADING...";
 }
