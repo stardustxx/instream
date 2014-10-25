@@ -4,6 +4,8 @@ var instaSearch;
 $(document).ready(function(){
   var searchField = $('#search');
   var timer;
+    
+  console.log('document loaded');
 
     /**
    * keycode glossary
@@ -53,6 +55,11 @@ $(document).ready(function(){
     }
   }
 
+});
+
+//checks if polymer is loaded
+window.addEventListener('polymer-ready', function(){
+    instaSearch();
 });
 
 var result = "";

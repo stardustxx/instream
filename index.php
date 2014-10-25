@@ -28,7 +28,7 @@
             <paper-icon-button raised icon="refresh" onclick="updatepage()"></paper-icon-button>
             <span flex>InStream</span>
             <paper-icon-button icon="search"></paper-icon-button>
-            <paper-input id = "search" label = "Enter a search tag"></paper-input>
+            <paper-input id = "search" label = "Enter a search tag" value = "instadaily"></paper-input>
         </core-toolbar>
     
 	
