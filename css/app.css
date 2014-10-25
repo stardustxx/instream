@@ -39,6 +39,10 @@ body {
     overflow: hidden;
 }
 
+.item .content {
+    display: none;
+}
+
 .expand {
     margin: 1rem;
     padding: 0.5rem;
@@ -50,6 +54,10 @@ body {
     width: 50rem;
     height: auto;
     overflow: scroll;
+}
+
+.expand .content {
+    display: inline;
 }
 
 #beaker {
