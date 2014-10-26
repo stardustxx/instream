@@ -51,11 +51,11 @@
     //store id to session
       //echo sizeof($results['data']);
         //start the lightbox album
-        echo "<section>";
-        echo "<ul class='lb-album'>";
+        //echo "<section>";
+        //echo "<ul class='lb-album'>";
     foreach($results['data'] as $item){
         
-        /*
+        
         echo "<paper-item class = 'item'>";
         echo "<paper-shadow z='2'></paper-shadow>";
         echo "<paper-ripple fit></paper-ripple>";
@@ -72,8 +72,8 @@
         echo '</div>';
         
         echo "</paper-item>";
-        */
         
+        /*
         //grabbing data
         $image_link = $item['images']['standard_resolution']['url'];
         $user = $item['user']['username'];
@@ -94,9 +94,10 @@
                 echo "<a href='#page' class='lib-close'>x Close</a>";
             echo "</div>";
         echo "</li>";
+        */
     }
       
-    echo "</ul></section>";
+    //echo "</ul></section>";
   }else{
     echo "No Results!";
   }
