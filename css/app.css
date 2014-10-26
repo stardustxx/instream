@@ -64,11 +64,11 @@ body {
 }
 
 #beaker {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
 }
 
-#mainHeader {
+.mainHeader {
     background-color: #00C688;
 }
 
@@ -76,4 +76,10 @@ core-header-panel {
   height: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch; 
+}
+
+@media (max-width: 440px){
+    #logo {
+        display: none;   
+    }
 }
