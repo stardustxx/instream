@@ -7,19 +7,9 @@
 	<script src="js/jquery.js" type="text/javascript"></script>
 	<script src="js/app.js" type="text/javascript"></script>
 	<script src="components/webcomponentsjs/webcomponents.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="import" href="components/paper-button/paper-button.html">
-    <link rel="import" href="components/polymer/polymer.html">
-	<link rel="import" href="components/core-toolbar/core-toolbar.html">
-	<link rel="import" href="components/core-icon/core-icon.html">
-	<link rel="import" href="components/core-icon-button/core-icon-button.html">
-	<link rel="import" href="components/paper-icon-button/paper-icon-button.html">
-	<link rel="import" href="components/paper-input/paper-input.html">
-	<link rel="import" href="components/paper-toast/paper-toast.html">
-    <link rel="import" href="components/paper-shadow/paper-shadow.html">
-    <link rel="import" href="components/paper-ripple/paper-ripple.html">
-    <link rel="import" href="components/core-header-panel/core-header-panel.html">
+	<link rel="import" href="imports.html">
 </head>
 <body>
     <core-header-panel mode = "seamed">
