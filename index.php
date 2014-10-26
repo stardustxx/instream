@@ -9,6 +9,7 @@
 	<script src="js/app.js" type="text/javascript"></script>
 	<script src="components/webcomponentsjs/webcomponents.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/lightbox.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="import" href="components/paper-button/paper-button.html">
 	<link rel="import" href="components/core-toolbar/core-toolbar.html">
