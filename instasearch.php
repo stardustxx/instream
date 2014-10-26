@@ -60,7 +60,7 @@
         echo "<paper-shadow z='2'></paper-shadow>";
         echo "<paper-ripple fit></paper-ripple>";
         $image_link = $item['images']['standard_resolution']['url'];
-        echo '<img id="img" src="'.$image_link.'" />';
+        echo '<img id="img" src="'.$image_link.'" data-lightbox />';
         
         //hidden content
         echo '<div class="card-right content" flex>';
@@ -68,7 +68,7 @@
             $url = $item['link'];
             echo '<div layout horizontal center><strong>'.$user.'</strong></div>';
             $caption = $item['caption']['text'];
-            echo '<div flex><p class="caption">'.$caption.'</p></div>';
+           // echo '<div flex><p class="caption">'.$caption.'</p></div>';
         echo '</div>';
         
         echo "</paper-item>";

@@ -80,6 +80,7 @@ function addToResult(str){
     //do some functions?
     var papers = document.getElementsByTagName('paper-item');
     
+    /*
     for(var i=0; i<papers.length; i++){
         var paper = papers[i];
         paper.addEventListener('click', function(){
@@ -87,7 +88,7 @@ function addToResult(str){
             if(this.className == 'item'){this.className = 'expand';}
             else{this.className = 'item';}
         }, false);
-    }
+    }*/
 }
 
 function postRequest(strURL) {
