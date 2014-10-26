@@ -54,13 +54,13 @@
         //echo "<section>";
         //echo "<ul class='lb-album'>";
     foreach($results['data'] as $item){
-        
+        $user = $item['user']['username'];
+        $caption = $item['caption']['text'];
         
         echo "<paper-item class = 'item'>";
         echo "<paper-shadow z='2'></paper-shadow>";
-        
         $image_link = $item['images']['standard_resolution']['url'];
-        echo '<a href = "'.$image_link.'" data-lightbox = "insta">';
+        echo '<a href = "'.$image_link.'" data-lightbox = "insta" data-title="@'.$user.'<br>'.$caption.'">';
         echo "<paper-ripple fit></paper-ripple>";
         echo '<img id="img" src="'.$image_link.'" /></a>';
         
