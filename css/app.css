@@ -78,7 +78,15 @@ core-header-panel {
   -webkit-overflow-scrolling: touch; 
 }
 
-@media (max-width: 440px){
+@media (max-width: 500px){
+    .item img {
+        width: 35vw;
+        height: auto;
+        overflow: hidden;
+    }   
+}
+
+@media (max-width: 400px){
     #logo {
         display: none;   
     }
