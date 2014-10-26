@@ -20,7 +20,7 @@
             <paper-icon-button raised icon="refresh" onclick="updatepage()"></paper-icon-button>
             <paper-input id = "search" label = "Enter a search tag" value = "instadaily"></paper-input>
         </core-toolbar>
-
+        
         
 	
         <div id = "beaker" class = "tbCenter">
