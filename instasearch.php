@@ -58,9 +58,11 @@
         
         echo "<paper-item class = 'item'>";
         echo "<paper-shadow z='2'></paper-shadow>";
-        echo "<paper-ripple fit></paper-ripple>";
+        
         $image_link = $item['images']['standard_resolution']['url'];
-        echo '<img id="img" src="'.$image_link.'" data-lightbox />';
+        echo '<a href = "'.$image_link.'" data-lightbox = "insta">';
+        echo "<paper-ripple fit></paper-ripple>";
+        echo '<img id="img" src="'.$image_link.'" /></a>';
         
         //hidden content
         echo '<div class="card-right content" flex>';
